@@ -612,66 +612,135 @@
 <script>
 // ========== DATA ==========
 const vocab = [
- { word: "appliance", ipa: "/əˈplaɪəns/", type: "noun", meaning: "thiết bị gia dụng", example: "Modern appliances make housework easier.", exampleVN: "Các thiết bị gia dụng hiện đại làm việc nhà dễ hơn." },
-
-{ word: "automatic", ipa: "/ˌɔːtəˈmætɪk/", type: "adjective", meaning: "tự động", example: "The door has an automatic system.", exampleVN: "Cánh cửa có hệ thống tự động." },
-
-{ word: "cable TV", ipa: "/ˈkeɪbl tiːˈviː/", type: "noun", meaning: "truyền hình cáp", example: "My family watches movies on cable TV every weekend.", exampleVN: "Gia đình tôi xem phim trên truyền hình cáp mỗi cuối tuần." },
-
-{ word: "castle", ipa: "/ˈkɑːsl/", type: "noun", meaning: "lâu đài", example: "The old castle stands on the hill.", exampleVN: "Tòa lâu đài cổ đứng trên ngọn đồi." },
-
-{ word: "comfortable", ipa: "/ˈkʌmftəbl/", type: "adjective", meaning: "thoải mái, tiện nghi", example: "This chair is very comfortable.", exampleVN: "Chiếc ghế này rất thoải mái." },
-
-{ word: "cottage", ipa: "/ˈkɒtɪdʒ/", type: "noun", meaning: "nhà nhỏ ở quê", example: "They spent their holiday in a small cottage.", exampleVN: "Họ dành kỳ nghỉ trong một ngôi nhà nhỏ ở quê." },
-
-{ word: "different", ipa: "/ˈdɪfrənt/", type: "adjective", meaning: "khác biệt", example: "My idea is different from yours.", exampleVN: "Ý tưởng của tôi khác với của bạn." },
-
-{ word: "dishwasher", ipa: "/ˈdɪʃwɒʃə(r)/", type: "noun", meaning: "máy rửa bát", example: "We put the dirty plates in the dishwasher.", exampleVN: "Chúng tôi cho những chiếc đĩa bẩn vào máy rửa bát." },
-
-{ word: "drip", ipa: "/drɪp/", type: "verb", meaning: "chảy nhỏ giọt", example: "Water is dripping from the tap.", exampleVN: "Nước đang nhỏ giọt từ vòi." },
-
-{ word: "drop", ipa: "/drɒp/", type: "noun", meaning: "giọt nước", example: "A drop of rain fell on my hand.", exampleVN: "Một giọt mưa rơi vào tay tôi." },
-
-{ word: "dry", ipa: "/draɪ/", type: "adjective", meaning: "khô ráo", example: "Keep your clothes in a dry place.", exampleVN: "Hãy giữ quần áo ở nơi khô ráo." },
-
-{ word: "electricity", ipa: "/ɪˌlekˈtrɪsəti/", type: "noun", meaning: "điện", example: "The storm cut off the electricity.", exampleVN: "Cơn bão làm mất điện." },
-
-{ word: "fantastic", ipa: "/fænˈtæstɪk/", type: "adjective", meaning: "tuyệt vời", example: "We had a fantastic trip last summer.", exampleVN: "Chúng tôi có một chuyến đi tuyệt vời vào mùa hè năm ngoái." },
-
-{ word: "fridge", ipa: "/frɪdʒ/", type: "noun", meaning: "tủ lạnh", example: "There is some juice in the fridge.", exampleVN: "Có một ít nước trái cây trong tủ lạnh." },
-
-{ word: "hay", ipa: "/heɪ/", type: "noun", meaning: "cỏ khô", example: "Farmers store hay for the winter.", exampleVN: "Nông dân dự trữ cỏ khô cho mùa đông." },
-
-{ word: "helicopter", ipa: "/ˈhelɪkɒptə(r)/", type: "noun", meaning: "máy bay trực thăng", example: "The rescue team arrived by helicopter.", exampleVN: "Đội cứu hộ đến bằng trực thăng." },
-
-{ word: "hi-tech", ipa: "/ˌhaɪ ˈtek/", type: "adjective", meaning: "công nghệ cao", example: "The office uses hi-tech equipment.", exampleVN: "Văn phòng sử dụng thiết bị công nghệ cao." },
-
-{ word: "houseboat", ipa: "/ˈhaʊsbəʊt/", type: "noun", meaning: "nhà thuyền", example: "Some families live in houseboats on the river.", exampleVN: "Một số gia đình sống trên nhà thuyền trên sông." },
-
-{ word: "housework", ipa: "/ˈhaʊswɜːk/", type: "noun", meaning: "việc nhà", example: "I help my mother with the housework.", exampleVN: "Tôi giúp mẹ làm việc nhà." },
-
-{ word: "iron", ipa: "/ˈaɪən/", type: "verb", meaning: "ủi quần áo", example: "She irons her clothes every morning.", exampleVN: "Cô ấy ủi quần áo mỗi sáng." },
-
-{ word: "look after", ipa: "/lʊk ˈɑːftə(r)/", type: "phrasal verb", meaning: "chăm sóc, trông nom", example: "She looks after her little brother.", exampleVN: "Cô ấy chăm sóc em trai mình." },
-
-{ word: "modern", ipa: "/ˈmɒdn/", type: "adjective", meaning: "hiện đại", example: "They live in a modern apartment.", exampleVN: "Họ sống trong một căn hộ hiện đại." },
-
-{ word: "motorhome", ipa: "/ˈməʊtəˌhəʊm/", type: "noun", meaning: "nhà lưu động", example: "They travel around the country in a motorhome.", exampleVN: "Họ đi du lịch khắp đất nước bằng nhà lưu động." },
-
-{ word: "mountain", ipa: "/ˈmaʊntən/", type: "noun", meaning: "ngọn núi", example: "We climbed a high mountain yesterday.", exampleVN: "Chúng tôi leo một ngọn núi cao hôm qua." },
-
-{ word: "ocean", ipa: "/ˈəʊʃn/", type: "noun", meaning: "đại dương", example: "The Pacific Ocean is very large.", exampleVN: "Thái Bình Dương rất lớn." },
-
-{ word: "palace", ipa: "/ˈpæləs/", type: "noun", meaning: "cung điện", example: "The king lives in a beautiful palace.", exampleVN: "Nhà vua sống trong một cung điện đẹp." },
-
-{ word: "postcard", ipa: "/ˈpəʊstkɑːd/", type: "noun", meaning: "bưu thiếp", example: "She sent me a postcard from Paris.", exampleVN: "Cô ấy gửi cho tôi một tấm bưu thiếp từ Paris." },
-
-{ word: "probably", ipa: "/ˈprɒbəbli/", type: "adverb", meaning: "có lẽ", example: "It will probably rain today.", exampleVN: "Có lẽ hôm nay trời sẽ mưa." },
-
-{ word: "professor", ipa: "/prəˈfesə(r)/", type: "noun", meaning: "giáo sư", example: "He is a professor at the university.", exampleVN: "Ông ấy là giáo sư tại trường đại học." },
-
-{ word: "robot", ipa: "/ˈrəʊbɒt/", type: "noun", meaning: "người máy", example: "In the future, robots will do our housework.", exampleVN: "Trong tương lai, người máy sẽ làm việc nhà cho chúng ta." },
-];
+{
+word:"symbol",
+ipa:"/ˈsɪmbəl/",
+type:"noun",
+meaning:"biểu tượng, ký hiệu",
+example:"The dove is a symbol of peace.",
+exampleVN:"Chim bồ câu là biểu tượng của hòa bình."
+},
+{
+word:"because",
+ipa:"/bɪˈkɔːz/",
+type:"conjunction",
+meaning:"bởi vì",
+example:"She stayed home because she was sick.",
+exampleVN:"Cô ấy ở nhà vì cô ấy bị ốm."
+},
+{
+word:"why",
+ipa:"/waɪ/",
+type:"adverb",
+meaning:"tại sao",
+example:"Why are you late today?",
+exampleVN:"Tại sao hôm nay bạn đến muộn?"
+},
+{
+word:"continent",
+ipa:"/ˈkɒntɪnənt/",
+type:"noun",
+meaning:"lục địa",
+example:"Asia is the largest continent.",
+exampleVN:"Châu Á là lục địa lớn nhất."
+},
+{
+word:"Europe",
+ipa:"/ˈjʊərəp/",
+type:"noun",
+meaning:"Châu Âu",
+example:"France is a country in Europe.",
+exampleVN:"Pháp là một quốc gia ở Châu Âu."
+},
+{
+word:"Asia",
+ipa:"/ˈeɪʒə/",
+type:"noun",
+meaning:"Châu Á",
+example:"Vietnam is in Asia.",
+exampleVN:"Việt Nam ở Châu Á."
+},
+{
+word:"how",
+ipa:"/haʊ/",
+type:"adverb",
+meaning:"như thế nào",
+example:"How do you make this cake?",
+exampleVN:"Bạn làm bánh này như thế nào?"
+},
+{
+word:"how long",
+ipa:"/haʊ lɒŋ/",
+type:"question phrase",
+meaning:"bao lâu",
+example:"How long will the trip take?",
+exampleVN:"Chuyến đi sẽ mất bao lâu?"
+},
+{
+word:"university",
+ipa:"/ˌjuːnɪˈvɜːsəti/",
+type:"noun",
+meaning:"trường đại học",
+example:"She studies at a famous university.",
+exampleVN:"Cô ấy học tại một trường đại học nổi tiếng."
+},
+{
+word:"director",
+ipa:"/dəˈrektə(r)/",
+type:"noun",
+meaning:"đạo diễn, giám đốc",
+example:"The director made a great movie.",
+exampleVN:"Đạo diễn đã làm một bộ phim tuyệt vời."
+},
+{
+word:"angry",
+ipa:"/ˈæŋɡri/",
+type:"adjective",
+meaning:"tức giận",
+example:"He was angry about the mistake.",
+exampleVN:"Anh ấy tức giận về lỗi đó."
+},
+{
+word:"delicious",
+ipa:"/dɪˈlɪʃəs/",
+type:"adjective",
+meaning:"ngon",
+example:"This soup is delicious.",
+exampleVN:"Món súp này rất ngon."
+},
+{
+word:"popular",
+ipa:"/ˈpɒpjələ(r)/",
+type:"adjective",
+meaning:"phổ biến, nổi tiếng",
+example:"Soccer is very popular in Vietnam.",
+exampleVN:"Bóng đá rất phổ biến ở Việt Nam."
+},
+{
+word:"children",
+ipa:"/ˈtʃɪldrən/",
+type:"noun",
+meaning:"trẻ em",
+example:"The children are playing in the park.",
+exampleVN:"Những đứa trẻ đang chơi trong công viên."
+},
+{
+word:"favourite",
+ipa:"/ˈfeɪvərɪt/",
+type:"adjective",
+meaning:"yêu thích",
+example:"Blue is her favourite color.",
+exampleVN:"Màu xanh là màu yêu thích của cô ấy."
+},
+{
+word:"sport",
+ipa:"/spɔːt/",
+type:"noun",
+meaning:"thể thao",
+example:"He plays sport every weekend.",
+exampleVN:"Anh ấy chơi thể thao mỗi cuối tuần."
+},
+  ];
 
 // ========== STATE ==========
 let currentIndex = 0;
